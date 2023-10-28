@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test all(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="ca.amazon.testcase.Searchtest">
+        <methods>
+          <include name="searchresult" invocation-numbers="1 2 3"/>
+          <include name="beforesuite"/>
+          <include name="launchapp"/>
+          <include name="teardown"/>
+          <include name="loadconfig"/>
+        </methods>
+      </class> <!-- ca.amazon.testcase.Searchtest -->
+    </classes>
+  </test> <!-- Test all(failed) -->
+</suite> <!-- Failed suite [Suite] -->
