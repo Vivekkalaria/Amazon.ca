@@ -61,16 +61,16 @@ public class Baseclass {
 	
 
 	
-	public static void loadbrowser(String browsername) {
-		//String browsername1= prop.getProperty("browser");
-		if (browsername.equalsIgnoreCase("Chrome")) {
+	public static void loadbrowser() {
+		String browser= prop.getProperty("browser");
+		if (browser.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			// Set Browser to ThreadLocalMap
 			driver.set(new ChromeDriver());
-		} else if (browsername.equalsIgnoreCase("Firefox")) {
+		} else if (browser.equalsIgnoreCase("Firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver.set(new FirefoxDriver());
-		} else if (browsername.equalsIgnoreCase("IE")) {
+		} else if (browser.equalsIgnoreCase("IE")) {
 			WebDriverManager.iedriver().setup();
 			driver.set(new InternetExplorerDriver());
 		}
@@ -91,7 +91,7 @@ public class Baseclass {
 	}
 	
 	
-	 @AfterSuite(groups = { "Smoke", "Regression","Sanity" }) 
+	 @AfterSuite(groups = { "Smoke","Sanity" }) 
 	 public void
 	 afterSuite() { Extentmanager.endReport(); }
 	

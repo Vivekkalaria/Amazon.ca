@@ -4,6 +4,7 @@
 <listeners>
 		<listener class-name="ca.amazon.utility.Listenerclass"></listener>
 	</listeners>
+	<parameter name="browser" value="Firefox"></parameter>
   <test thread-count="5" name="Test all">
     <classes>
       <class name="ca.amazon.testcase.Addtocarttest"/>

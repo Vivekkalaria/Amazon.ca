@@ -16,15 +16,16 @@ import ca.amazon.pageobject.Youraccountpage;
 import ca.amazon.utility.Log;
 public class Logintest extends Baseclass {
 
+	
 	public static Homepage homepage=new Homepage();
 	public static Loginpage loginpage=new Loginpage();
 	public static Loginpasswordpage loginpassword= new Loginpasswordpage();
 	public static Youraccountpage youraccountpage= new Youraccountpage();
 	
-	
+	@Parameters("browser")
 	@BeforeMethod(groups={"smoke","sanity"})
-	public void launchapp(String browser) {
-		loadbrowser(browser);
+	public void launchapp() {
+		loadbrowser();
 	}
 	
 	@AfterMethod  (groups={"smoke","sanity"})

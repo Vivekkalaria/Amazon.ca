@@ -1,34 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Crossbrowser]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Crometest(failed)">
-    <parameter name="browser" value="Chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="ca.amazon.testcase.Searchtest">
         <methods>
-          <include name="searchresult"/>
-          <include name="beforesuite"/>
+          <include name="searchresult" invocation-numbers="1 2 3"/>
           <include name="launchapp"/>
           <include name="teardown"/>
-          <include name="validateproductperpage"/>
-          <include name="partialtextvalidate"/>
+          <include name="afterSuite"/>
+          <include name="loadconfig"/>
         </methods>
       </class> <!-- ca.amazon.testcase.Searchtest -->
     </classes>
-  </test> <!-- Crometest(failed) -->
-  <test thread-count="5" name="FireFoxtest(failed)">
-    <parameter name="browser" value="Firefox"/>
-    <classes>
-      <class name="ca.amazon.testcase.Searchtest">
-        <methods>
-          <include name="searchresult"/>
-          <include name="beforesuite"/>
-          <include name="launchapp"/>
-          <include name="teardown"/>
-          <include name="validateproductperpage"/>
-          <include name="partialtextvalidate"/>
-        </methods>
-      </class> <!-- ca.amazon.testcase.Searchtest -->
-    </classes>
-  </test> <!-- FireFoxtest(failed) -->
-</suite> <!-- Failed suite [Crossbrowser] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

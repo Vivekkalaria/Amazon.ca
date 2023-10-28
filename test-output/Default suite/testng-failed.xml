@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ca.amazon.testcase.Addtocarttest">
+      <class name="ca.amazon.testcase.Searchtest">
         <methods>
-          <include name="teardown"/>
-          <include name="beforesuite"/>
-          <include name="validateaddtocartproduct"/>
+          <include name="searchresult" invocation-numbers="1 2 3"/>
           <include name="launchapp"/>
+          <include name="teardown"/>
+          <include name="afterSuite"/>
+          <include name="loadconfig"/>
         </methods>
-      </class> <!-- ca.amazon.testcase.Addtocarttest -->
+      </class> <!-- ca.amazon.testcase.Searchtest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

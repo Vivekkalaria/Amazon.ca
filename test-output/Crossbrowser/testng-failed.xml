@@ -7,10 +7,11 @@
       <class name="ca.amazon.testcase.Searchtest">
         <methods>
           <include name="searchresult"/>
-          <include name="beforesuite"/>
           <include name="launchapp"/>
-          <include name="teardown"/>
           <include name="validateproductperpage"/>
+          <include name="teardown"/>
+          <include name="afterSuite"/>
+          <include name="loadconfig"/>
           <include name="partialtextvalidate"/>
         </methods>
       </class> <!-- ca.amazon.testcase.Searchtest -->
@@ -22,10 +23,11 @@
       <class name="ca.amazon.testcase.Searchtest">
         <methods>
           <include name="searchresult"/>
-          <include name="beforesuite"/>
           <include name="launchapp"/>
-          <include name="teardown"/>
           <include name="validateproductperpage"/>
+          <include name="afterSuite"/>
+          <include name="teardown"/>
+          <include name="loadconfig"/>
           <include name="partialtextvalidate"/>
         </methods>
       </class> <!-- ca.amazon.testcase.Searchtest -->

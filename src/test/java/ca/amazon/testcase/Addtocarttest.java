@@ -25,8 +25,8 @@ public class Addtocarttest extends Baseclass {
 	
 	
 	@BeforeMethod(groups={"smoke","sanity"})
-	public void launchapp(String browser) {
-		loadbrowser(browser);
+	public void launchapp() {
+		loadbrowser();
 	}
 	
 	@AfterMethod (groups={"smoke","sanity"})
